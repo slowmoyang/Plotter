@@ -340,7 +340,7 @@ void Plotter::CreateStack( TDirectory *target, Logfile& logfile) {
     pt2->Draw();
 
     TPaveText *pt3 = new TPaveText(0.09,0.82,0.21,0.88,"NBNDC");
-    pt3->AddText("Preliminary");
+    pt3->AddText("Work in Progress");
     pt3->SetTextAlign(12);
     pt3->SetTextFont(52);
     pt3->SetFillStyle(0);
@@ -419,9 +419,9 @@ void Plotter::CreateStack( TDirectory *target, Logfile& logfile) {
 
       delete[] binner;
       if( !onlyTop ) {
-	delete errorratio;
-	delete PrevFitTMP;
-	signalBot->Delete();
+        // delete errorratio;
+        // delete PrevFitTMP;
+        signalBot->Delete();
       }
 
     } else if ( obj->IsA()->InheritsFrom( TDirectory::Class() ) ) {
